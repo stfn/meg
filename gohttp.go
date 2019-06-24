@@ -18,6 +18,7 @@ var transport = &http.Transport{
 		KeepAlive: time.Second,
 		DualStack: true,
 	}).DialContext,
+	Proxy: http.ProxyFromEnvironment,
 }
 
 var httpClient = &http.Client{
