@@ -10,9 +10,9 @@ import (
 	"time"
 )
 
-const (
-	userAgent = "Mozilla/5.0 (compatible; meg/0.2; +https://github.com/tomnomnom/meg)"
+var userAgent = "Mozilla/5.0 (compatible; meg/0.2; +https://github.com/tomnomnom/meg)"
 
+const (
 	// argument defaults
 	defaultPathsFile = "./paths"
 	defaultHostsFile = "./hosts"

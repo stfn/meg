@@ -109,6 +109,10 @@ func processArgs() config {
 	flag.BoolVar(&verbose, "verbose", false, "")
 	flag.BoolVar(&verbose, "v", false, "")
 
+	// user agent
+	flag.StringVar(&userAgent, "user-agent", userAgent, "")
+	flag.StringVar(&userAgent, "u", userAgent, "")
+
 	flag.Parse()
 
 	// paths might be in a file, or it might be a single value
@@ -168,6 +172,7 @@ func init() {
 		h += "  -s, --savestatus <status>  Save only responses with specific status code\n"
 		h += "  -t, --timeout <millis>     Set the HTTP timeout (default: 10000)\n"
 		h += "  -v, --verbose              Verbose mode\n"
+		h += "  -u, --user-agent           Set a custom user agent\n"
 		h += "  -X, --method <method>      HTTP method (default: GET)\n\n"
 
 		h += "Defaults:\n"
